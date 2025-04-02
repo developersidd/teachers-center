@@ -23,11 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${inter.variable} antialiased`}>
         <Header />
-        <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-100px)]">
+        <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-83px)]">
           <Sidebar />
-          <section
-            className={`transition-all h-auto w-[calc(100vw-200px)] translate-x-[182px] bg-gray-100`}
-          >
+          <section className="transition-all h-auto w-[calc(100vw-180px)] translate-x-[180px] bg-gray-100 p-6">
             {children}
           </section>
         </div>

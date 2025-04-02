@@ -23,10 +23,10 @@ const Header = () => {
           </ul>
           <div className="w-[1px] h-[50px] bg-black mx-4" />
           <div className="flex gap-3 items-center">
-            <div className="w-12 h-12 rounded-full  border-2 border-gray-300">
+            <div className="w-12 h-12 rounded-full  ">
               <img
                 className=""
-                src="https://avatar.iran.liara.run/public/45"
+                src="https://avatar.iran.liara.run/public/7"
                 alt=""
               />
             </div>

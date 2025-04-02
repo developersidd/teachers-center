@@ -1,16 +1,30 @@
 "use client";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  console.log(" pathname:", pathname);
+  const [isOpen, setIsOpen] = useState(() => {
+    if (pathname?.startsWith("/all-batches")) {
+      return true;
+    }
+    return false;
+  });
   return (
     <aside className="w-[80px] fixed top-[83px] left-0 sm:w-[180px] bg-white  h-full hidden sm:block">
       <ul className="flex flex-col gap-4 pt-4 h-[calc(100vh-100px)] ">
         <li className="mb-8">
-          <Link className="ml-3" href={"/tech"}>
-            Tech
+          <Link
+            className="ml-3 flex items-center justify-between"
+            href={"/tech"}
+          >
+            <span> Tech </span>
+            <div className="w-7 h-7 mr-3 flex items-center justify-center rounded-full bg-black">
+              <ArrowLeft className="text-white" size={22} />
+            </div>
           </Link>
         </li>
         <li className="mb-4">
@@ -18,7 +32,7 @@ const Sidebar = () => {
             Dashboard
           </Link>
         </li>
-        <li className="w-full ">
+        <li className="w-full">
           <button
             className="ml-3 flex items-center gap-8 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
@@ -35,17 +49,22 @@ const Sidebar = () => {
               isOpen ? "max-h-[350px]" : "max-h-0"
             }`}
           >
-            <ul className="flex flex-col gap-2 mt-2">
-              <li className="bg-blue-200 p-2 rounded-r ">
-                <Link className="ml-3" href={"/all-batches"}>
+            <ul className=" mt-2">
+              <li
+                className={`${
+                  pathname?.startsWith("/all-batches") && "bg-blue-200"
+                } p-2 rounded-r `}
+              >
+                <Link className={`ml-3 `} href={"/all-batches/"}>
                   All Batches
                 </Link>
               </li>
-              <li className="bg-blue-200 p-2 rounded-r ">
-                <Link
-                  className="ml-3 bg-blue-200  rounded-r "
-                  href={"/resource"}
-                >
+              <li
+                className={`${
+                  pathname === "/resource" && "bg-blue-200"
+                } p-2 rounded-r `}
+              >
+                <Link className="ml-3   rounded-r " href={"/resource"}>
                   Resource
                 </Link>
               </li>
