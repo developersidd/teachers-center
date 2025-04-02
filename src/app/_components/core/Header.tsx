@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="border-b border-gray-300 sticky top-0 left-0 right-0 w-full bg-white z-10 shadow-sm">
-      <div className="container mx-auto flex justify-between items-center p-4 ">
+    <header className="border-b border-gray-300 sticky top-0 left-0 right-0 w-full bg-white z-10 ">
+      <div className="px-12  mx-auto flex justify-between items-center p-4 ">
         <div>
           <h1 className="text-2xl">Teacher&apos;s Center</h1>
         </div>

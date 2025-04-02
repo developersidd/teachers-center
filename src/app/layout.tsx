@@ -26,11 +26,7 @@ export default function RootLayout({
         <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-100px)]">
           <Sidebar />
           <section
-            style={{
-              width: `calc(100vw - 200px)`,
-              transform: `translateX(182px)`,
-            }}
-            className={`transition-all h-auto `}
+            className={`transition-all h-auto w-[calc(100vw-200px)] translate-x-[182px] bg-gray-100`}
           >
             {children}
           </section>
