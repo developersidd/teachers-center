@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Sidebar = () => {
   const pathname = usePathname();
-  console.log(" pathname:", pathname);
   const [isOpen, setIsOpen] = useState(() => {
     if (pathname?.startsWith("/all-batches")) {
       return true;

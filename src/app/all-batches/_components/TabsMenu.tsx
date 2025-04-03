@@ -1,5 +1,5 @@
 "use client";
-import { Download, Ellipsis, Trash } from "lucide-react";
+import { CircleEllipsis, Download, Trash } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -37,8 +37,8 @@ const TabsMenu = () => {
               </li>
             );
           })}
-          <li className="border size-8 rounded-full flex items-center justify-center bg-white shadow">
-            <Ellipsis />
+          <li className="">
+            <CircleEllipsis />
           </li>
         </ul>
         <div className="flex items-center gap-4">
