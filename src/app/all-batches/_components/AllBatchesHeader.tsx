@@ -1,4 +1,4 @@
-import ProgressBar from "@/app/_components/core/ProgressBar";
+import ProgressBar from "@/components/core/ProgressBar";
 import { Laptop } from "lucide-react";
 
 const AllBatchesHeader = () => {
