@@ -1,4 +1,5 @@
 import { BellRing, Headset } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
@@ -24,10 +25,12 @@ const Header = () => {
           <div className="w-[1px] h-[50px] bg-black mx-4" />
           <div className="flex gap-3 items-center">
             <div className="w-12 h-12 rounded-full  ">
-              <img
+              <Image
                 className=""
-                src="https://avatar.iran.liara.run/public/7"
+                src="/assets/images/teacher.png"
                 alt=""
+                width={100}
+                height={100}
               />
             </div>
             <div>

@@ -33,8 +33,8 @@ const MaterialsTabsMenu = () => {
               <li
                 key={name}
                 className={`${
-                  isActive ? "border-b-4 border-black" : ""
-                }  p-4 capitalize text-black`}
+                  isActive ? " border-black " : "border-gray-50"
+                }  px-4 py-3.5 capitalize border-b-4  text-black`}
               >
                 <Link href={tabPath}>{name}</Link>
               </li>

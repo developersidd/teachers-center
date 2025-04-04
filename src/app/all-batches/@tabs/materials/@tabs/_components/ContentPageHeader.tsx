@@ -1,3 +1,4 @@
+import Checkbox from "@/components/custom/Checkbox";
 import { ArrowLeft, ChevronRight, Eye, Info } from "lucide-react";
 const ContentPageHeader = () => {
   return (
@@ -10,16 +11,11 @@ const ContentPageHeader = () => {
         <ChevronRight />
         <h3 className="underline font-medium text-lg"> Chapter 1.1 </h3>
         <ChevronRight />
-        <div className="px-4 py-3 rounded-xl bg-gray-100 max-w-max">
-          <label htmlFor="chapter-1">
-            <input
-              className="bg-black text-bl"
-              type="checkbox"
-              name=""
-              id="chapter-1"
-            />
-            <span className="ml-2 font-bold text-lg "> Chapter 1 </span>
-          </label>
+        <div className="pl-5 pr-9 py-3 rounded-xl bg-gray-100 max-w-max flex items-center gap-2">
+          <Checkbox
+            id="chapter-1"
+            label={<span className="ml-2 font-bold text-lg "> Chapter 1 </span>}
+          />
         </div>
       </div>
       <div className="flex items-center gap-4 ">

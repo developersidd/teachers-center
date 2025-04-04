@@ -16,7 +16,6 @@ const tabsMenu = [
 const TabsMenu = () => {
   const pathname = usePathname();
   console.log(" pathname:", pathname);
-  const activeCls = "border-b-4 border-blue-800";
   return (
     <nav>
       <div className="border-b border-gray-500 flex items-center justify-between px-5">
@@ -30,8 +29,8 @@ const TabsMenu = () => {
             return (
               <li
                 key={name}
-                className={`${isActive ? activeCls : ""}  
-                 p-4 capitalize text-blue-900 `}
+                className={`${isActive ? "border-blue-800" : "border-gray-50"}  
+                 px-4 py-3.5 capitalize text-blue-900 border-b-4`}
               >
                 <Link href={tabPath}>{name}</Link>
               </li>

@@ -1,5 +1,6 @@
 import ProgressBar from "@/components/core/ProgressBar";
 import { Laptop } from "lucide-react";
+import Image from "next/image";
 
 const AllBatchesHeader = () => {
   return (
@@ -27,16 +28,20 @@ const AllBatchesHeader = () => {
             <Laptop /> <span>Take Class</span>{" "}
           </button>
           <div className="flex items-center">
-            <img
+            <Image
               className="size-10 rounded-full"
-              src="https://avatar.iran.liara.run/public/51"
-              alt=""
+              src="/assets/images/women-teacher.png"
+              alt="women-teacher"
+              width={50}
+              height={50}
             />
             <button className="relative -left-3 shadow bg-white flex items-center gap-5 py-[7px] pl-14 pr-6 rounded-xl">
-              <img
+              <Image
+                width={50}
+                height={50}
+                src="/assets/images/teacher.png"
+                alt="teacher"
                 className="size-10 rounded-full absolute -top-[.7px] -left-1"
-                src="https://avatar.iran.liara.run/public/7"
-                alt=""
               />
               <h5>Add TA</h5>
             </button>
