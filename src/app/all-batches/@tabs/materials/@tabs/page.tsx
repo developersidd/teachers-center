@@ -1,4 +1,4 @@
-import Chapter from "../_components/Chapter";
+import Chapter from "./_components/Chapter";
 import ContentPageHeader from "./_components/ContentPageHeader";
 
 const ContentPage = () => {
