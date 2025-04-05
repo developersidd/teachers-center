@@ -7,7 +7,9 @@ const Header = () => {
     <header className="border-b border-gray-300 sticky top-0 left-0 right-0 w-full bg-white z-10 ">
       <div className="px-12  mx-auto flex justify-between items-center p-4 ">
         <div>
-          <h1 className="text-2xl">Teacher&apos;s Center</h1>
+          <Link href="/" className="text-2xl">
+            Teacher&apos;s Center
+          </Link>
         </div>
         <nav className="flex justify-between items-center gap-5">
           <ul className="flex gap-8 items-center">

@@ -54,7 +54,7 @@ const Sidebar = () => {
                   pathname?.startsWith("/all-batches") && "bg-blue-200"
                 } p-2 rounded-r `}
               >
-                <Link className={`ml-3 `} href={"/all-batches/"}>
+                <Link className={`ml-3 `} href={"/all-batches/materials"}>
                   All Batches
                 </Link>
               </li>
